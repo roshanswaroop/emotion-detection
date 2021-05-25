@@ -1,5 +1,5 @@
 # For ENGR 40M Grading:
-All of the direct implementation is going to be in `ard.py`, `emotion_webcam_demo.py`, and `display.ino`, in `../src`but feel free to browse other aspects I used from Travis. I kept his Git history for sake of full transparency.
+All of the direct implementation is going to be in `ard.py`, `emotion_webcam_demo.py`, and `display.ino`, in `../src`but feel free to browse other aspects I used from Travis. I kept his Git history for sake of full transparency and to fully uphold the spirit of the Stanford Honor Code.
 
 # Face Classification 
 The following repository is a real-time face detection and emotion classification model.

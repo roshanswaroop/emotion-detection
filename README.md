@@ -32,6 +32,7 @@ The model is trained on a CNN architecture called VGGFace, I replicated some of 
 * Download pretrained model and weight `trained_vggface.h5` from [here](https://drive.google.com/file/d/1Wv_Z4lAa7BgYqSAeceK9TxJNfwoLTwKy/view?usp=sharing).
 
 * Place `trained_vggface.h5` into `../datasets/trained_models/`.
+* Upload `display.ino` to your Arduino Uno. You will need access to Stanford ENGR40M's Lab 2A handout to build the hardware.
 
 * Run `emotion_webcam_demo.py` using `python3 emotion_webcam_demo.py`
 

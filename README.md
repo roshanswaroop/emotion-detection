@@ -5,7 +5,7 @@ All of the direct implementation is going to be in `ard.py`, `emotion_webcam_dem
 The following repository is a real-time face detection and emotion classification model.
 Credit goes to Travis Tang for the original design and guide for implementation.
 <p align="center">
-    <img width="320" height="300" src="https://github.com/roshanswaroop/emotion-detection/blob/master/images/IMG_2719.png">
+    <img width="320" height="350" src="https://github.com/roshanswaroop/emotion-detection/blob/master/images/IMG_2719.png">
     <img width="320" height="240" src="https://raw.githubusercontent.com/travistangvh/emotion-detection-in-real-time/master/images/demo1.gif">
     <img width="320" height="240" src="https://raw.githubusercontent.com/travistangvh/emotion-detection-in-real-time/master/images/demo2.gif">
 </p>

@@ -66,27 +66,15 @@ void loop() {
 
   // use 'static' so that it retains its value between successive calls of loop()
   static byte ledOn[8][8];
-
   byte x = 0;
   byte y = 0;
-  static char message[60];
-  String emotion = ""; 
 
-  if (Serial.available()) {
-    // Parse the values from the serial string
-//    x = Serial.parseInt();
-//    y = Serial.parseInt();
-      emotion = Serial.readString();
-      Serial.print(emotion);
-      if (emotion == "angry") {
-        ledOn[0][0] = 1;
-        ledOn[0][1] = 1;
-        ledOn[0][2] = 1;
-        ledOn[0][3] = 1;
-      }
-
-    // Toggle the LED state
-    //ledOn[x][y] = !ledOn[x][y];
+  while (Serial.available()) {
+    // Keep parsing the values from the serial input buffer until empty
+    x = Serial.parseInt();
+    y = Serial.parseInt();
+    ledOn[x][y] = !ledOn[x][y];
+      
   }
 
   // This function gets called every loop

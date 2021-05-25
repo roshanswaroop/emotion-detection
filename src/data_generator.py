@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Dec 21 02:29:44 2019
 File: data_generator.py
-Author: Travis Tang (Voon Hao)
-Github: https://github.com/travistangvh
 Description: Preprocessing data (into dataframe) for the training of the keras model
 Note: A tutorial on the flow_from_dataframe method can be found at https://medium.com/@vijayabhaskar96/tutorial-on-keras-flow-from-dataframe-1fd4493d237c
 """

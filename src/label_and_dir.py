@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 24 02:10:55 2019
 
-@author: User
-"""
 import pandas as pd
 from src import append_ext
 

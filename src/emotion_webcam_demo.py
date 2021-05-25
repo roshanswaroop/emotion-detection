@@ -1,24 +1,26 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Dec 21 02:29:44 2019
-File: emotion_webcam_demo.py
-Author: Travis Tang (Voon Hao)
-Github: https://github.com/travistangvh
-Description: Real-time Emotion Classification Demo using Webcam
+Author: Roshan Swaroop, Original by Travis Tang (Voon Hao)
+Github: https://github.com/roshanswaroop | https://github.com/travistangvh
+Description: Real-time Emotion Classification Arduino LCD Display using Webcam
 """
 from tensorflow.keras import models
 import cv2
 import numpy as np
+import serial
+from time import sleep
 from mtcnn.mtcnn import MTCNN
 import trained_models 
+import h5py
+from ard import make_face
 
-#Importing the model
-trained_model = models.load_model('../trained_models/trained_vggface.h5', compile=False)
+#Importing the model, put your absolute trained model path as first param
+trained_model = models.load_model('/Users/roshanswaroop/Downloads/emotion-detection-in-real-time/src/trained_models/trained_vggface.h5', compile=False)
 trained_model.summary()
 # prevents openCL usage and unnecessary logging messages
 cv2.ocl.setUseOpenCL(False)
 # dictionary which assigns each label an emotion (alphabetical order)
-emotion_dict = {0: "Angry", 1: "Disgust", 2: "Fear", 3: "Happy", 4: "Sad", 5: "Surprise", 6: 'Neutral'}
+emotion_dict = {0: "Angry", 1: "Disgust", 2: "Fear", 3: "Happy", 4: "Sad", 5: "Surprised", 6: 'Neutral'}
 detector = MTCNN()
 # start the webcam feed
 cap = cv2.VideoCapture(0)
@@ -46,8 +48,9 @@ while True:
             cropped_img_float = cropped_img_expanded.astype(float)
             prediction = trained_model.predict(cropped_img_float)
             print(prediction)
-            maxindex = int(np.argmax(prediction))
+            maxindex = int(np.argmax(prediction)) # output of classification
             cv2.putText(frame, emotion_dict[maxindex], (x1+20, y1-60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+            make_face(maxindex)
         except:
             pass
     cv2.imshow('Video',frame)

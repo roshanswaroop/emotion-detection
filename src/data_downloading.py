@@ -2,7 +2,7 @@
 """
 Created on Sat Dec 21 02:29:44 2019
 File: data_downloading.py
-Author: Travis Tang (Voon Hao)
+Author: Travis Tang (Voon Hao), I did not edit this
 Github: https://github.com/travistangvh
 Description: Downloading the FER2013 dataset
 Note: This code is heavily adapted from Amine Horseman's the 'Convert FER2013 to Image and Landmarks' in the Facial Expression Recognition SVM git. 

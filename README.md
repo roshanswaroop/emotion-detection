@@ -25,8 +25,8 @@ The model is trained on a CNN architecture called VGGFace, I replicated some of 
 ### To run the demo.
 * Clone this commit to your local machine using `git clone `
 
-* Install these dependencies with pip install 
-`pip install -r ../REQUIREMENTS.txt` It may not work at first, so Google alternate versions if pip is giving trouble.
+* Install these dependencies with pip install
+`pip install -r ../REQUIREMENTS.txt` It may not work at first, so Google alternate versions of dependencies if pip is giving trouble. You can open the .txt file to see what ballpark of versions should be used.
 
 * Download pretrained model and weight `trained_vggface.h5` from [here](https://drive.google.com/file/d/1Wv_Z4lAa7BgYqSAeceK9TxJNfwoLTwKy/view?usp=sharing).
 
